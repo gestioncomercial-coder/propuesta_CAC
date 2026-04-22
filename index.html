@@ -63,7 +63,7 @@ nav{
 /* ── HERO ── */
 .hero{
   min-height:92vh;
-  background:linear-gradient(135deg,#f0f6ff 0%,#e8f6f6 50%,#f5f9ff 100%);
+  background:#ffffff;
   display:flex;align-items:center;padding-top:64px;
   position:relative;overflow:hidden;
   border-bottom:3px solid var(--accent);
@@ -792,7 +792,7 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
           <tr>
             <td>
               <strong>Módulo People</strong><br/>
-              <span style="font-size:.78rem;color:var(--muted)">Portal autogestión + comunicaciones + licencias</span>
+              <span style="font-size:.78rem;color:var(--muted)">Portal autogestión + comunicaciones + licencias + formularios</span>
             </td>
             <td><strong>600</strong></td>
             <td>USD 1,00/emp</td>
@@ -820,7 +820,7 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
             <td><strong>600</strong></td>
             <td>USD 0,40/emp</td>
             <td class="accent-val">USD 240</td>
-            <td style="color:var(--green);font-weight:600">✓ Incluida en People</td>
+            <td style="color:var(--mid);font-weight:600;font-size:.82rem">Precio incluido<br/>en Módulo People</td>
           </tr>
           <!-- TOTALES -->
           <tr style="background:linear-gradient(90deg,var(--teal-bg),transparent)">
@@ -837,7 +837,8 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
               TOTAL IMPLEMENTACIÓN
               <span style="display:block;font-size:.74rem;font-weight:400;color:var(--muted)">Pago único, financiado en 6 cuotas — solo los primeros 6 meses</span>
             </td>
-            <td colspan="2">
+            <td></td>
+            <td>
               <strong style="font-size:1.25rem;color:var(--mid)">USD 13.000</strong>
               <span style="display:block;font-size:.8rem;color:var(--muted);margin-top:.2rem">→ 6 cuotas de USD 2.167/mes</span>
             </td>
@@ -861,7 +862,7 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
       </div>
 
       <!-- Explicación previa -->
-      <div style="padding:1.4rem 2rem;background:var(--off);border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem">
+      <div style="padding:1.4rem 2rem;background:var(--off);border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
         <div style="display:flex;align-items:flex-start;gap:.8rem">
           <div style="width:38px;height:38px;border-radius:8px;background:var(--teal-bg);display:grid;place-items:center;font-size:1.1rem;flex-shrink:0">📋</div>
           <div>
@@ -878,14 +879,6 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
             <div style="font-size:.75rem;color:var(--muted)">6 cuotas · luego desaparece</div>
           </div>
         </div>
-        <div style="display:flex;align-items:flex-start;gap:.8rem">
-          <div style="width:38px;height:38px;border-radius:8px;background:rgba(232,146,10,.1);display:grid;place-items:center;font-size:1.1rem;flex-shrink:0">💡</div>
-          <div>
-            <div style="font-size:.72rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.2rem">Total acumulado 12 meses</div>
-            <div style="font-size:.88rem;font-weight:700;color:var(--navy)">USD 134.502</div>
-            <div style="font-size:.75rem;color:var(--muted)">(6×$12.292 + 6×$10.125)</div>
-          </div>
-        </div>
       </div>
 
       <table>
@@ -894,8 +887,7 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
             <th style="width:12%">Mes</th>
             <th style="width:28%">Licencias mensuales</th>
             <th style="width:28%">Cuota implementación</th>
-            <th style="width:16%">Total del mes</th>
-            <th style="width:16%">Acumulado</th>
+            <th style="width:20%">Total del mes</th>
           </tr>
         </thead>
         <tbody>
@@ -913,7 +905,6 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
               <span style="display:block;font-size:.74rem;color:var(--muted)">Cuota 1/6 de implementación</span>
             </td>
             <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 12.292</td>
-            <td style="color:var(--muted);font-size:.9rem">USD 12.292</td>
           </tr>
           <!-- MES 2 -->
           <tr>
@@ -928,7 +919,6 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
               <span style="display:block;font-size:.74rem;color:var(--muted)">Cuota 2/6 de implementación</span>
             </td>
             <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 12.292</td>
-            <td style="color:var(--muted);font-size:.9rem">USD 24.584</td>
           </tr>
           <!-- MES 3 -->
           <tr>
@@ -943,7 +933,6 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
               <span style="display:block;font-size:.74rem;color:var(--muted)">Cuota 3/6 de implementación</span>
             </td>
             <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 12.292</td>
-            <td style="color:var(--muted);font-size:.9rem">USD 36.876</td>
           </tr>
           <!-- MES 4 -->
           <tr>
@@ -958,7 +947,6 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
               <span style="display:block;font-size:.74rem;color:var(--muted)">Cuota 4/6 de implementación</span>
             </td>
             <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 12.292</td>
-            <td style="color:var(--muted);font-size:.9rem">USD 49.168</td>
           </tr>
           <!-- MES 5 -->
           <tr>
@@ -973,7 +961,6 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
               <span style="display:block;font-size:.74rem;color:var(--muted)">Cuota 5/6 de implementación</span>
             </td>
             <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 12.292</td>
-            <td style="color:var(--muted);font-size:.9rem">USD 61.460</td>
           </tr>
           <!-- MES 6 -->
           <tr style="background:linear-gradient(90deg,#fff8ee,transparent)">
@@ -988,10 +975,6 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
               <span style="display:block;font-size:.74rem;color:var(--accent);font-weight:600">⚑ Última cuota de implementación</span>
             </td>
             <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 12.292</td>
-            <td>
-              <strong style="font-size:1rem;color:var(--accent)">USD 73.752</strong>
-              <span style="display:block;font-size:.72rem;color:var(--muted)">Total primeros 6 meses</span>
-            </td>
           </tr>
           <!-- SEPARADOR -->
           <tr>
@@ -1013,25 +996,13 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
               <span style="display:block;font-size:.74rem;color:var(--green)">Implementación ya cancelada ✓</span>
             </td>
             <td style="font-weight:800;color:var(--green);font-size:1rem">USD 10.125</td>
-            <td style="color:var(--muted);font-size:.85rem">Crece USD 10.125<br/>cada mes</td>
           </tr>
-          <!-- RESUMEN ANUAL -->
-          <tr style="background:linear-gradient(90deg,#eef3f9,#f7f9fc)">
-            <td colspan="3" style="font-weight:700;color:var(--navy);font-size:.92rem;padding:1.1rem 1.5rem">
-              💰 RESUMEN AÑO 1 COMPLETO (12 meses)
-              <span style="display:block;font-size:.74rem;font-weight:400;color:var(--muted);margin-top:.2rem">Meses 1–6 (con implementación) + Meses 7–12 (solo licencias)</span>
-            </td>
-            <td colspan="2" style="padding:1.1rem 1.5rem">
-              <strong style="font-size:1.3rem;color:var(--navy)">USD 134.502</strong>
-              <span style="display:block;font-size:.8rem;color:var(--muted);margin-top:.3rem">= (6 × USD 12.292) + (6 × USD 10.125)</span>
-              <span style="display:block;font-size:.78rem;color:var(--muted)">= USD 73.752 + USD 60.750</span>
-            </td>
-          </tr>
+
         </tbody>
       </table>
       <div class="pres-foot">
         <p>📌 <strong>Nota:</strong> Todos los valores en Dólares Estadounidenses. La licencia mensual de USD 10.125 escala con la cantidad real de usuarios activos declarados.</p>
-        <p>🔄 <strong>Desde el Mes 7:</strong> El costo mensual baja de USD 12.292 a USD 10.125 porque la implementación queda totalmente pagada.</p>
+        <p>🔄 <strong>Desde el Mes 7:</strong> El costo mensual baja a USD 10.125 — la implementación queda totalmente cancelada.</p>
       </div>
     </div>
 
