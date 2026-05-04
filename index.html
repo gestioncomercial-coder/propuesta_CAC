@@ -253,15 +253,38 @@ section{padding:5.5rem 3rem}
 .time-features{display:grid;grid-template-columns:1fr 1fr;gap:.45rem;margin-top:1rem}
 .time-features li{display:flex;align-items:flex-start;gap:.55rem;font-size:.83rem;color:var(--text);line-height:1.45}
 .time-features li::before{content:'›';color:var(--mid);font-weight:700;flex-shrink:0;line-height:1.4;font-size:1rem}
+
+/* VISMA TIME — tarifas diferenciadas */
+.time-tarifas{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.2rem 0}
+.tarifa-box{border-radius:12px;padding:1.1rem 1.3rem;position:relative;overflow:hidden;border:1.5px solid var(--border)}
+.tarifa-box.emp{background:linear-gradient(145deg,#fff8ee,#fff);border-color:rgba(232,146,10,.35)}
+.tarifa-box.vis{background:linear-gradient(145deg,var(--blue-bg),#fff);border-color:rgba(37,99,184,.28)}
+.tb-badge{font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem}
+.tarifa-box.emp .tb-badge{color:var(--accent)}
+.tarifa-box.vis .tb-badge{color:var(--mid)}
+.tb-cantidad{font-size:.8rem;color:var(--muted);margin-bottom:.5rem}
+.tb-precio{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;line-height:1}
+.tarifa-box.emp .tb-precio{color:var(--accent)}
+.tarifa-box.vis .tb-precio{color:var(--mid)}
+.tb-unit{font-size:.73rem;color:var(--muted);font-weight:400;font-family:'DM Sans',sans-serif}
+.tb-razon{font-size:.75rem;color:var(--muted);margin-top:.55rem;line-height:1.5;font-style:italic;border-top:1px solid var(--border);padding-top:.5rem}
+
+.time-nota{
+  background:linear-gradient(90deg,rgba(37,99,184,.06),transparent);
+  border-left:3px solid var(--mid);border-radius:0 8px 8px 0;
+  padding:.75rem 1rem;font-size:.79rem;color:var(--text);line-height:1.55;margin-top:.4rem;
+}
+.time-nota strong{color:var(--navy)}
+
 .time-price-box{
   background:var(--blue-bg);border:1.5px solid rgba(37,99,184,.22);
   border-radius:12px;padding:1.4rem;min-width:200px;text-align:center;
 }
 .time-price-box .tp-num{
   font-family:'Playfair Display',serif;
-  font-size:2.4rem;font-weight:900;color:var(--mid);line-height:1;margin-bottom:.2rem;
+  font-size:2rem;font-weight:900;color:var(--mid);line-height:1;margin-bottom:.2rem;
 }
-.time-price-box .tp-unit{font-size:.78rem;color:var(--muted);margin-bottom:1rem}
+.time-price-box .tp-unit{font-size:.76rem;color:var(--muted);margin-bottom:1rem}
 .time-price-box .tp-impl{
   font-size:.78rem;color:var(--muted);
   background:#fff;border:1px solid var(--border);
@@ -409,6 +432,7 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
   .intro-grid{grid-template-columns:1fr;gap:2.5rem}
   .modulos-grid{grid-template-columns:1fr}
   .time-inner{grid-template-columns:1fr}
+  .time-tarifas{grid-template-columns:1fr}
   .time-features{grid-template-columns:1fr}
   .func-grid{grid-template-columns:1fr}
   .casos-grid{grid-template-columns:1fr}
@@ -435,7 +459,7 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
     <a href="#presupuesto">Presupuesto</a>
     <a href="#contacto">Contacto</a>
   </div>
-  <a class="nav-btn" href="#contacto">Agendar demo</a>
+  <a class="nav-btn" href="#contacto">Consultas →</a>
 </nav>
 
 <!-- HERO -->
@@ -519,7 +543,7 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
   <div class="container">
     <div class="sec-label">Solución propuesta</div>
     <h2 class="sec-title">Los cuatro módulos VISMA para la CAC</h2>
-    <p class="sec-sub">Cada módulo resuelve un área específica. VISMA Time cubre a los 6.700 colaboradores; los módulos de RRHH core están diseñados para los 600 usuarios del área de personas.</p>
+    <p class="sec-sub">Cada módulo resuelve un área específica. VISMA Time cubre a los 6.700 colaboradores con tarifa diferenciada por perfil; los módulos de RRHH core están diseñados para los 600 empleados.</p>
 
     <div class="modulos-grid">
 
@@ -597,7 +621,7 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
 
     </div>
 
-    <!-- VISMA TIME — card completa -->
+    <!-- VISMA TIME — card completa con tarifas diferenciadas -->
     <div class="time-card">
       <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:1.2rem">
         <span style="font-size:1.8rem">⏱️</span>
@@ -611,7 +635,27 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
           <p style="font-size:.9rem;color:var(--muted);line-height:1.65;margin-bottom:.8rem">
             Software completo de gestión de tiempo y asistencia para los <strong style="color:var(--navy)">6.700 colaboradores</strong> de la CAC. Controla entradas, salidas, horas extra y licencias integrando todos los métodos de marcaje disponibles — desde reloj biométrico hasta app mobile con geolocalización.
           </p>
-          <ul class="feat-list time-features" style="display:grid;grid-template-columns:1fr 1fr;gap:.45rem">
+
+          <!-- TARIFAS DIFERENCIADAS -->
+          <div class="time-tarifas">
+            <div class="tarifa-box emp">
+              <div class="tb-badge">👔 Empleados · Alta frecuencia</div>
+              <div class="tb-cantidad">600 usuarios</div>
+              <div class="tb-precio">USD 1,35 <span class="tb-unit">/ usuario / mes</span></div>
+              <div class="tb-razon">Personal con fichaje diario de entrada y salida. Múltiples registros por jornada y acceso permanente a las instalaciones a lo largo de todo el año.</div>
+            </div>
+            <div class="tarifa-box vis">
+              <div class="tb-badge">🎓 Alumnos / Visitantes · Acceso ocasional</div>
+              <div class="tb-cantidad">6.100 usuarios</div>
+              <div class="tb-precio">USD 0,50 <span class="tb-unit">/ usuario / mes</span></div>
+              <div class="tb-razon">Alumnos y visitantes con ingresos esporádicos y baja frecuencia de uso del sistema de control de accesos. Utilización puntual y no recurrente.</div>
+            </div>
+          </div>
+          <div class="time-nota">
+            📌 <strong>Tarifa diferenciada por frecuencia de uso:</strong> Los empleados generan múltiples registros diarios durante todo el año, mientras que los alumnos y visitantes acceden de forma ocasional. Esta distinción permite a la CAC abonar una tarifa proporcional al uso real de la plataforma por cada perfil.
+          </div>
+
+          <ul class="feat-list time-features" style="display:grid;grid-template-columns:1fr 1fr;gap:.45rem;margin-top:1.2rem">
             <li>Control de entradas y salidas por reloj o app</li>
             <li>Administración de turnos y rotaciones</li>
             <li>Horas extra y cambios de turno automatizados</li>
@@ -631,8 +675,13 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
           </div>
         </div>
         <div class="time-price-box">
-          <div class="tp-num">USD 1,35</div>
-          <div class="tp-unit">/empleado/mes</div>
+          <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:.6rem">Total VISMA Time</div>
+          <div class="tp-num">USD 3.860</div>
+          <div class="tp-unit">/mes · (600×1,35 + 6.100×0,50)</div>
+          <div style="font-size:.73rem;color:var(--muted);margin-bottom:1rem;line-height:1.45">
+            <span style="color:var(--accent);font-weight:700">USD 810</span> empleados<br/>
+            <span style="color:var(--mid);font-weight:700">+ USD 3.050</span> alumnos/visitantes
+          </div>
           <div class="tp-impl">💼 Implementación<br/><strong>USD 3.000</strong><br/>Financiable en 6 cuotas fijas<br/>de USD 500</div>
         </div>
       </div>
@@ -776,19 +825,42 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
           </tr>
         </thead>
         <tbody>
+          <!-- VISMA TIME — fila empleados -->
           <tr>
             <td>
-              <strong>VISMA Time</strong><br/>
-              <span style="font-size:.78rem;color:var(--muted)">Control de asistencia y accesos</span>
+              <strong>VISMA Time — Empleados</strong><br/>
+              <span style="font-size:.75rem;color:var(--accent);font-weight:600">👔 Alta frecuencia · fichaje diario</span><br/>
+              <span style="font-size:.74rem;color:var(--muted)">Control de asistencia y accesos</span>
             </td>
-            <td><strong>6.700</strong></td>
-            <td>USD 1,35/emp</td>
-            <td class="accent-val" style="font-size:1rem">USD 9.045</td>
-            <td>
+            <td><strong>600</strong></td>
+            <td>USD 1,35/usuario</td>
+            <td class="accent-val" style="font-size:1rem">USD 810</td>
+            <td rowspan="2" style="vertical-align:middle;border-bottom:1px solid var(--border)">
               <strong style="color:var(--navy)">USD 3.000</strong>
               <span style="font-size:.76rem;color:var(--muted);display:block">→ 6 cuotas de USD 500/mes</span>
             </td>
           </tr>
+          <!-- VISMA TIME — fila alumnos/visitantes -->
+          <tr style="background:rgba(37,99,184,.03)">
+            <td>
+              <strong>VISMA Time — Alumnos / Visitantes</strong><br/>
+              <span style="font-size:.75rem;color:var(--mid);font-weight:600">🎓 Acceso ocasional · baja frecuencia</span><br/>
+              <span style="font-size:.74rem;color:var(--muted)">Control de accesos esporádico</span>
+            </td>
+            <td><strong>6.100</strong></td>
+            <td>USD 0,50/usuario</td>
+            <td class="accent-val" style="font-size:1rem">USD 3.050</td>
+          </tr>
+          <!-- SUBTOTAL TIME -->
+          <tr style="background:linear-gradient(90deg,var(--blue-bg),transparent)">
+            <td colspan="3" style="font-size:.82rem;color:var(--mid);font-style:italic;padding-top:.6rem;padding-bottom:.6rem">
+              ↳ Subtotal VISMA Time · 6.700 usuarios
+              <span style="display:block;font-size:.74rem;color:var(--muted);font-style:normal">Tarifa diferenciada por frecuencia de uso: empleados vs. alumnos/visitantes</span>
+            </td>
+            <td style="font-weight:700;color:var(--mid)">USD 3.860/mes</td>
+            <td style="color:var(--muted);font-size:.82rem">USD 3.000</td>
+          </tr>
+          <!-- PEOPLE -->
           <tr>
             <td>
               <strong>Módulo People</strong><br/>
@@ -802,6 +874,7 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
               <span style="font-size:.76rem;color:var(--muted);display:block">→ 6 cuotas de USD 1.667/mes</span>
             </td>
           </tr>
+          <!-- LEGAJOS -->
           <tr>
             <td>
               <strong>Módulo de Legajos</strong><br/>
@@ -810,8 +883,9 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
             <td><strong>600</strong></td>
             <td>USD 0,40/emp</td>
             <td class="accent-val">USD 240</td>
-            <td style="color:var(--green);font-weight:600">✓ Incluida en People</td>
+            <td style="color:var(--mid);font-weight:600;font-size:.82rem">Precio incluido<br/>en Módulo People</td>
           </tr>
+          <!-- FIRMA -->
           <tr>
             <td>
               <strong>Firma de Documentos</strong><br/>
@@ -822,16 +896,18 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
             <td class="accent-val">USD 240</td>
             <td style="color:var(--mid);font-weight:600;font-size:.82rem">Precio incluido<br/>en Módulo People</td>
           </tr>
-          <!-- TOTALES -->
+          <!-- TOTAL LICENCIAS -->
           <tr style="background:linear-gradient(90deg,var(--teal-bg),transparent)">
             <td colspan="3" style="font-weight:700;color:var(--navy);font-size:.95rem">
               TOTAL LICENCIAS MENSUAL
               <span style="display:block;font-size:.74rem;font-weight:400;color:var(--muted)">Se paga todos los meses, de forma permanente</span>
             </td>
             <td colspan="2">
-              <strong style="font-size:1.25rem;color:var(--teal)">USD 10.125 / mes</strong>
+              <strong style="font-size:1.25rem;color:var(--teal)">USD 4.940 / mes</strong>
+              <span style="display:block;font-size:.76rem;color:var(--muted);margin-top:.2rem">VISMA Time USD 3.860 + People USD 600 + Legajos USD 240 + Firma USD 240</span>
             </td>
           </tr>
+          <!-- TOTAL IMPLEMENTACIÓN -->
           <tr style="background:var(--blue-bg)">
             <td colspan="3" style="font-weight:700;color:var(--navy);font-size:.95rem">
               TOTAL IMPLEMENTACIÓN
@@ -848,6 +924,7 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
       <div class="pres-foot">
         <p>💵 <strong>Moneda:</strong> Dólares Estadounidenses. Las licencias escalan con la cantidad de usuarios activos.</p>
         <p>📅 <strong>Implementación:</strong> USD 13.000 en 6 cuotas fijas mensuales sin interés adicional. Después del mes 6 deja de cobrarse.</p>
+        <p>📊 <strong>VISMA Time:</strong> Tarifa diferenciada — empleados (alta frecuencia) USD 1,35 · alumnos/visitantes (acceso ocasional) USD 0,50.</p>
       </div>
     </div>
 
@@ -858,7 +935,7 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
           <div style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.3rem">Cuadro 2 de 2</div>
           <h3>Cashflow mes a mes — ¿cuánto sale en total?</h3>
         </div>
-        <div class="total-pill" style="background:var(--green)">Desde el Mes 7 → USD 10.125/mes</div>
+        <div class="total-pill" style="background:var(--green)">Desde el Mes 7 → USD 4.940/mes</div>
       </div>
 
       <!-- Explicación previa -->
@@ -867,7 +944,7 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
           <div style="width:38px;height:38px;border-radius:8px;background:var(--teal-bg);display:grid;place-items:center;font-size:1.1rem;flex-shrink:0">📋</div>
           <div>
             <div style="font-size:.72rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.2rem">Licencias (permanente)</div>
-            <div style="font-size:.88rem;font-weight:700;color:var(--navy)">USD 10.125 / mes</div>
+            <div style="font-size:.88rem;font-weight:700;color:var(--navy)">USD 4.940 / mes</div>
             <div style="font-size:.75rem;color:var(--muted)">Se paga siempre, indefinidamente</div>
           </div>
         </div>
@@ -897,14 +974,14 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
               <div style="background:linear-gradient(135deg,var(--teal-lt),var(--teal));color:#fff;border-radius:8px;padding:.3rem .5rem;font-weight:700;font-size:.85rem;display:inline-block;min-width:52px">Mes 1</div>
             </td>
             <td>
-              <span style="font-weight:600;color:var(--teal)">USD 10.125</span>
+              <span style="font-weight:600;color:var(--teal)">USD 4.940</span>
               <span style="display:block;font-size:.74rem;color:var(--muted)">VISMA Time + People + Legajos + Firma</span>
             </td>
             <td>
               <span style="font-weight:600;color:var(--mid)">USD 2.167</span>
               <span style="display:block;font-size:.74rem;color:var(--muted)">Cuota 1/6 de implementación</span>
             </td>
-            <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 12.292</td>
+            <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 7.107</td>
           </tr>
           <!-- MES 2 -->
           <tr>
@@ -912,13 +989,13 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
               <div style="background:linear-gradient(135deg,var(--teal-lt),var(--teal));color:#fff;border-radius:8px;padding:.3rem .5rem;font-weight:700;font-size:.85rem;display:inline-block;min-width:52px">Mes 2</div>
             </td>
             <td>
-              <span style="font-weight:600;color:var(--teal)">USD 10.125</span>
+              <span style="font-weight:600;color:var(--teal)">USD 4.940</span>
             </td>
             <td>
               <span style="font-weight:600;color:var(--mid)">USD 2.167</span>
               <span style="display:block;font-size:.74rem;color:var(--muted)">Cuota 2/6 de implementación</span>
             </td>
-            <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 12.292</td>
+            <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 7.107</td>
           </tr>
           <!-- MES 3 -->
           <tr>
@@ -926,13 +1003,13 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
               <div style="background:linear-gradient(135deg,var(--teal-lt),var(--teal));color:#fff;border-radius:8px;padding:.3rem .5rem;font-weight:700;font-size:.85rem;display:inline-block;min-width:52px">Mes 3</div>
             </td>
             <td>
-              <span style="font-weight:600;color:var(--teal)">USD 10.125</span>
+              <span style="font-weight:600;color:var(--teal)">USD 4.940</span>
             </td>
             <td>
               <span style="font-weight:600;color:var(--mid)">USD 2.167</span>
               <span style="display:block;font-size:.74rem;color:var(--muted)">Cuota 3/6 de implementación</span>
             </td>
-            <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 12.292</td>
+            <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 7.107</td>
           </tr>
           <!-- MES 4 -->
           <tr>
@@ -940,13 +1017,13 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
               <div style="background:linear-gradient(135deg,var(--teal-lt),var(--teal));color:#fff;border-radius:8px;padding:.3rem .5rem;font-weight:700;font-size:.85rem;display:inline-block;min-width:52px">Mes 4</div>
             </td>
             <td>
-              <span style="font-weight:600;color:var(--teal)">USD 10.125</span>
+              <span style="font-weight:600;color:var(--teal)">USD 4.940</span>
             </td>
             <td>
               <span style="font-weight:600;color:var(--mid)">USD 2.167</span>
               <span style="display:block;font-size:.74rem;color:var(--muted)">Cuota 4/6 de implementación</span>
             </td>
-            <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 12.292</td>
+            <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 7.107</td>
           </tr>
           <!-- MES 5 -->
           <tr>
@@ -954,13 +1031,13 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
               <div style="background:linear-gradient(135deg,var(--teal-lt),var(--teal));color:#fff;border-radius:8px;padding:.3rem .5rem;font-weight:700;font-size:.85rem;display:inline-block;min-width:52px">Mes 5</div>
             </td>
             <td>
-              <span style="font-weight:600;color:var(--teal)">USD 10.125</span>
+              <span style="font-weight:600;color:var(--teal)">USD 4.940</span>
             </td>
             <td>
               <span style="font-weight:600;color:var(--mid)">USD 2.167</span>
               <span style="display:block;font-size:.74rem;color:var(--muted)">Cuota 5/6 de implementación</span>
             </td>
-            <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 12.292</td>
+            <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 7.107</td>
           </tr>
           <!-- MES 6 -->
           <tr style="background:linear-gradient(90deg,#fff8ee,transparent)">
@@ -968,13 +1045,13 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
               <div style="background:linear-gradient(135deg,var(--accent),#c47008);color:#fff;border-radius:8px;padding:.3rem .5rem;font-weight:700;font-size:.85rem;display:inline-block;min-width:52px">Mes 6</div>
             </td>
             <td>
-              <span style="font-weight:600;color:var(--teal)">USD 10.125</span>
+              <span style="font-weight:600;color:var(--teal)">USD 4.940</span>
             </td>
             <td>
               <span style="font-weight:600;color:var(--mid)">USD 2.167</span>
               <span style="display:block;font-size:.74rem;color:var(--accent);font-weight:600">⚑ Última cuota de implementación</span>
             </td>
-            <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 12.292</td>
+            <td style="font-weight:800;color:var(--accent);font-size:1rem">USD 7.107</td>
           </tr>
           <!-- SEPARADOR -->
           <tr>
@@ -988,21 +1065,21 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
               <div style="background:linear-gradient(135deg,var(--green),#157a50);color:#fff;border-radius:8px;padding:.3rem .5rem;font-weight:700;font-size:.85rem;display:inline-block;min-width:52px">Mes 7+</div>
             </td>
             <td>
-              <span style="font-weight:600;color:var(--teal)">USD 10.125</span>
+              <span style="font-weight:600;color:var(--teal)">USD 4.940</span>
               <span style="display:block;font-size:.74rem;color:var(--muted)">Licencia mensual permanente</span>
             </td>
             <td>
               <span style="font-weight:700;color:var(--green)">USD 0</span>
               <span style="display:block;font-size:.74rem;color:var(--green)">Implementación ya cancelada ✓</span>
             </td>
-            <td style="font-weight:800;color:var(--green);font-size:1rem">USD 10.125</td>
+            <td style="font-weight:800;color:var(--green);font-size:1rem">USD 4.940</td>
           </tr>
 
         </tbody>
       </table>
       <div class="pres-foot">
-        <p>📌 <strong>Nota:</strong> Todos los valores en Dólares Estadounidenses. La licencia mensual de USD 10.125 escala con la cantidad real de usuarios activos declarados.</p>
-        <p>🔄 <strong>Desde el Mes 7:</strong> El costo mensual baja a USD 10.125 — la implementación queda totalmente cancelada.</p>
+        <p>📌 <strong>Nota:</strong> Todos los valores en Dólares Estadounidenses. La licencia mensual de USD 4.940 escala con la cantidad real de usuarios activos declarados.</p>
+        <p>🔄 <strong>Desde el Mes 7:</strong> El costo mensual baja a USD 4.940 — la implementación queda totalmente cancelada.</p>
       </div>
     </div>
 
@@ -1012,36 +1089,36 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
 <!-- POR QUÉ NOSOTROS -->
 <section id="nosotros" style="background:var(--off)">
   <div class="container">
-    <div class="sec-label">Por qué Xperts</div>
-    <h2 class="sec-title">Tu socio en la implementación</h2>
-    <p class="sec-sub">Somos partner implementador certificado de VISMA en Argentina. 25 años acompañando la transformación digital de organizaciones en LATAM.</p>
+    <div class="sec-label">Por qué Xperts + VISMA</div>
+    <h2 class="sec-title">Tu socio tecnológico</h2>
+    <p class="sec-sub">Xperts Consulting actúa como canal comercial y referente local de VISMA en Argentina. La implementación y el soporte técnico de la plataforma están a cargo directamente del equipo de VISMA — garantizando los más altos estándares de calidad.</p>
     <div class="why-grid">
       <div class="wcard">
         <div class="wicon">🎯</div>
         <div>
-          <h3>Equipo local en Buenos Aires</h3>
-          <p>Reuniones presenciales, seguimiento on-site y soporte en español. Conocemos la normativa laboral argentina — la plataforma se configura 100% acorde a las reglas locales.</p>
+          <h3>Xperts: tu punto de contacto local</h3>
+          <p>Somos el canal comercial de VISMA en Argentina. Acompañamos a la CAC desde la propuesta hasta el arranque, coordinando con el equipo de VISMA cada etapa del proyecto.</p>
         </div>
       </div>
       <div class="wcard">
         <div class="wicon">🏗️</div>
         <div>
-          <h3>Implementación metodológica</h3>
-          <p>Proceso estructurado: Diagnóstico → Configuración → Carga de datos → Capacitación → Go-live. El área de RRHH de la CAC opera de forma autónoma desde el primer día.</p>
+          <h3>VISMA implementa directamente</h3>
+          <p>El equipo técnico de VISMA LATAM es quien lleva adelante la implementación: configuración, carga de datos, capacitación y go-live. No hay intermediarios en la parte técnica.</p>
         </div>
       </div>
       <div class="wcard">
-        <div class="wicon">🤝</div>
+        <div class="wicon">🔒</div>
         <div>
-          <h3>Acompañamiento post go-live</h3>
-          <p>Soporte dedicado post-implementación, actualizaciones automáticas de la plataforma SaaS y acceso directo al equipo técnico de VISMA LATAM. No implementamos y desaparecemos.</p>
+          <h3>Soporte post go-live a cargo de VISMA</h3>
+          <p>Una vez en producción, la CAC cuenta con el soporte oficial de VISMA: actualizaciones automáticas, mesa de ayuda dedicada y evolución continua de la plataforma SaaS.</p>
         </div>
       </div>
       <div class="wcard">
         <div class="wicon">⭐</div>
         <div>
           <h3>Partner certificado VISMA</h3>
-          <p>Certificación oficial de VISMA en Argentina que garantiza los más altos estándares de implementación y acceso a todas las funcionalidades sin costo adicional.</p>
+          <p>La alianza Xperts–VISMA garantiza que la CAC acceda a la plataforma líder de RRHH en LATAM con respaldo comercial local y ejecución técnica de primer nivel.</p>
         </div>
       </div>
     </div>
@@ -1051,11 +1128,11 @@ footer p{font-size:.74rem;color:rgba(255,255,255,.28)}
 <!-- CTA -->
 <section class="cta" id="contacto">
   <div class="container" style="position:relative;z-index:1">
-    <h2 class="sec-title">¿Empezamos a digitalizar<br/>el RRHH de la CAC?</h2>
-    <p class="cta-desc">Agendemos una demo de la plataforma y definimos juntos los próximos pasos. Propuesta diseñada exclusivamente para la Cámara Argentina de Comercio y Servicios.</p>
+    <h2 class="sec-title">¿Quedaron dudas después<br/>de la demo?</h2>
+    <p class="cta-desc">Estamos disponibles para responder cualquier consulta sobre la propuesta, los módulos o los próximos pasos. Escribinos o llamanos cuando quieras.</p>
     <div class="cta-btns">
-      <a class="btn-cta-main" href="mailto:ana.gaude@xpertsconsulting.com">✉ Agendar demo</a>
-      <a class="btn-cta-out" href="tel:+541139144968">📞 Llamar ahora</a>
+      <a class="btn-cta-main" href="mailto:ana.gaude@xpertsconsulting.com">✉ Escribinos</a>
+      <a class="btn-cta-out" href="tel:+541139144968">📞 Llamanos</a>
     </div>
     <div class="contact-strip">
       <div class="ci"><div class="ci-lbl">CEO</div><a href="mailto:ana.gaude@xpertsconsulting.com">ana.gaude@xpertsconsulting.com</a></div>
